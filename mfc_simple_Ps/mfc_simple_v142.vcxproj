@@ -21,31 +21,31 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{29855E66-D703-447B-9F49-FDEAE7C5FF9F}</ProjectGuid>
     <RootNamespace>mfc_simple_v141</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>Dynamic</UseOfMfc>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -73,14 +73,14 @@
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\nt_i386_v141d\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug_nt_i386_v141\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(HVISUALIZE_INSTALL_DIR)\bin\nt_x64_v141d\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug_nt_x64_v141\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(HVISUALIZE_INSTALL_DIR)\bin\nt_x64_v142d\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug_nt_x64_v142\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\nt_i386_v141\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release_nt_i386_v141\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(HVISUALIZE_INSTALL_DIR)\bin\nt_x64_v141\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release_nt_x64_v141\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(HVISUALIZE_INSTALL_DIR)\bin\nt_x64_v142\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release_nt_x64_v142\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -131,9 +131,9 @@
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>hoopsd.lib;hoops_streamd.lib;hoops_mvo_mgkd.lib;hoops_utilsstatd_md.lib;hoops_mfcu_mgkd.lib;hp_bridgestatd_md.lib;pskernel_archive.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>hoops.lib;hoops_stream.lib;hoops_mvo_mgk.lib;hoops_utilsstat_md.lib;hoops_mfcu_mgk.lib;hp_bridgestat_md.lib;pskernel_archive.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\lib\nt_x64_v141;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\lib\nt_x64_v142d;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\lib\nt_x64_v142d;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\lib\nt_x64_v142d;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\lib\nt_x64_v142d;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\lib\nt_x64_v142d;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\lib\nt_x64_v142d;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
@@ -193,7 +193,7 @@
     <Link>
       <AdditionalDependencies>hoops.lib;hoops_stream.lib;hoops_mvo_mgk.lib;hoops_utilsstat_md.lib;hoops_mfcu_mgk.lib;hp_bridgestat_md.lib;pskernel_archive.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
-      <AdditionalLibraryDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\lib\nt_x64_v141;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\lib\nt_x64_v142;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\lib\nt_x64_v142;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\lib\nt_x64_v142;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\lib\nt_x64_v142;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\lib\nt_x64_v142;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\lib\nt_x64_v142;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
       <TargetMachine>MachineX64</TargetMachine>
