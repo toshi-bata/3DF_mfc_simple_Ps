@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" ToolsVersion="14.1">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{29855E66-D703-447B-9F49-FDEAE7C5FF9F}</ProjectGuid>
+    <RootNamespace>mfc_simple_v141</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">mfc_simpled</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">mfc_simpled_Ps</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">mfc_simple</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">mfc_simple_Ps</TargetName>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\..\bin\nt_i386_v141d\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Debug_nt_i386_v141\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(HVISUALIZE_INSTALL_DIR)\bin\nt_x64_v141d\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Debug_nt_x64_v141\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\..\..\bin\nt_i386_v141\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release_nt_i386_v141\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(HVISUALIZE_INSTALL_DIR)\bin\nt_x64_v141\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Release_nt_x64_v141\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\Dev_Tools\hoops_3dgs\source;..\..\..\Dev_Tools\hoops_stream\source;..\..\..\Dev_Tools\base_stream\source\stream_common;..\..\..\Dev_Tools\hoops_mvo\source;..\..\..\Dev_Tools\hoops_mfc\source;..\..\..\Dev_Tools\utility\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_AFXDLL;STDAFX;_DEBUG;DLLEXPORT=__declspec(dllexport);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>hoopsd.lib;hoops_streamd.lib;hoops_mvo_mgkd.lib;hoops_mfcu_mgkd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\Dev_Tools\hoops_3dgs\lib\nt_i386_v141;..\..\..\Dev_Tools\hoops_stream\lib\nt_i386_v141;..\..\..\Dev_Tools\hoops_mvo\lib\nt_i386_v141;..\..\..\Dev_Tools\hoops_mfc\lib\nt_i386_v141;..\..\..\Dev_Tools\utility\lib\nt_i386_v141;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\base_stream\source\stream_common;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\source;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;_CRT_SECURE_NO_WARNINGS;WIN64;_WINDOWS;_AFXDLL;STDAFX;_DEBUG;DLLEXPORT=__declspec(dllexport);PARASOLID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>hoopsd.lib;hoops_streamd.lib;hoops_mvo_mgkd.lib;hoops_utilsstatd_md.lib;hoops_mfcu_mgkd.lib;hp_bridgestatd_md.lib;pskernel_archive.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\lib\nt_x64_v141;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\..\Dev_Tools\hoops_3dgs\source;..\..\..\Dev_Tools\hoops_stream\source;..\..\..\Dev_Tools\base_stream\source\stream_common;..\..\..\Dev_Tools\hoops_mvo\source;..\..\..\Dev_Tools\hoops_mfc\source;..\..\..\Dev_Tools\utility\source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_AFXDLL;STDAFX;NDEBUG;DLLEXPORT=__declspec(dllexport);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>hoops.lib;hoops_stream.lib;hoops_mvo_mgk.lib;hoops_mfcu_mgk.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>..\..\..\Dev_Tools\hoops_3dgs\lib\nt_i386_v141;..\..\..\Dev_Tools\hoops_stream\lib\nt_i386_v141;..\..\..\Dev_Tools\hoops_mvo\lib\nt_i386_v141;..\..\..\Dev_Tools\hoops_mfc\lib\nt_i386_v141;..\..\..\Dev_Tools\utility\lib\nt_i386_v141;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\base_stream\source\stream_common;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\source;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\source;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_UNICODE;_CRT_SECURE_NO_WARNINGS;WIN64;_WINDOWS;_AFXDLL;STDAFX;NDEBUG;DLLEXPORT=__declspec(dllexport);PARASOLID;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>hoops.lib;hoops_stream.lib;hoops_mvo_mgk.lib;hoops_utilsstat_md.lib;hoops_mfcu_mgk.lib;hp_bridgestat_md.lib;pskernel_archive.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_3dgs\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_stream\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mvo\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hoops_mfc\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\utility\lib\nt_x64_v141;$(HVISUALIZE_INSTALL_DIR)\Dev_Tools\hp_bridge\lib\nt_x64_v141;$(PARASOLID_INSTALL_DIR)\base64_vc14;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>wWinMainCRTStartup</EntryPointSymbol>
+      <TargetMachine>MachineX64</TargetMachine>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="SampleH.ico" />
+    <None Include="SampleH.rc2" />
+    <None Include="SampleHDoc.ico" />
+    <None Include="Toolbar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BlendDlg.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="CreateBlockDlg.cpp" />
+    <ClCompile Include="EntityOneClickOperator.cpp" />
+    <ClCompile Include="HSampleHModel.cpp" />
+    <ClCompile Include="HSampleHSelectionSet.cpp" />
+    <ClCompile Include="HSampleHView.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="PsBooleanOperator.cpp" />
+    <ClCompile Include="SampleH.cpp" />
+    <ClCompile Include="SampleHDoc.cpp" />
+    <ClCompile Include="SampleHView.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</RuntimeTypeInfo>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</RuntimeTypeInfo>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</RuntimeTypeInfo>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <RuntimeTypeInfo Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</RuntimeTypeInfo>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlendDlg.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="CreateBlockDlg.h" />
+    <ClInclude Include="EntityOneClickOperator.h" />
+    <ClInclude Include="HSampleHModel.h" />
+    <ClInclude Include="HSampleHSelectionSet.h" />
+    <ClInclude Include="HSampleHView.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="PsBooleanOperator.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SampleH.h" />
+    <ClInclude Include="SampleHDoc.h" />
+    <ClInclude Include="SampleHView.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SampleH.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

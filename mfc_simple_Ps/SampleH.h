@@ -1,0 +1,55 @@
+// SampleH.h : interface of the CSampleHApp class, derived from CHoopsApp
+// This is the main header for the application
+
+
+#ifndef __AFXWIN_H__
+	#error include 'stdafx.h' before including this file for PCH
+#endif
+
+#ifndef _CSampleHApp_H__
+#define _CSampleHApp_H__
+
+#include "hc.h"
+#include "CHoopsApp.h"
+
+
+class HDB;
+
+
+/////////////////////////////////////////////////////////////////////////////
+// CSampleHApp:
+// See CSampleHApp.cpp for the implementation of this class
+//
+
+class CSampleHApp : public CHoopsApp
+{
+
+protected:
+
+
+
+public:
+	CSampleHApp();
+
+
+  
+// Overrides
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CSampleHApp)
+	public:
+	virtual BOOL InitInstance();
+	virtual int ExitInstance();
+	//}}AFX_VIRTUAL
+
+// Implementation
+
+	//{{AFX_MSG(CSampleHApp)
+	afx_msg void OnAppAbout();
+#ifdef	PARASOLID
+	afx_msg void OnFileOpen();
+#endif //PARASOLID
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
+};
+
+#endif	// _CSampleHApp_H__

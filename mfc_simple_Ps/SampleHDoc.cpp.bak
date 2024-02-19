@@ -1,0 +1,192 @@
+// SampleHDoc.cpp : implementation file
+//
+
+#include "StdAfx.h"
+#include "Resource.h"
+
+#include "SampleH.h"
+#include "SampleHDoc.h"
+#include "SampleHView.h"
+#include "HSampleHModel.h"
+
+#include "HUtilityLocaleString.h"
+
+extern CSampleHApp theApp;
+
+/////////////////////////////////////////////////////////////////////////////
+// CSampleHDoc
+
+IMPLEMENT_DYNCREATE(CSampleHDoc, CHoopsDoc)
+
+CSampleHDoc::CSampleHDoc()
+{
+	m_pHoopsModel = 0;
+	m_bStreamFile = false;
+	m_bSolidFile = false;
+}
+
+
+CSampleHDoc::~CSampleHDoc()
+{
+	if (m_pHoopsModel)
+	{
+		delete m_pHoopsModel;
+		m_pHoopsModel = 0;
+	}
+
+}
+
+
+// user has created a new document
+BOOL CSampleHDoc::OnNewDocument()
+{
+	if (!CHoopsDoc::OnNewDocument())
+		return FALSE;
+
+	// create a new HSampleHModel object for this Document
+	m_pHoopsModel = new HSampleHModel();
+	m_pHoopsModel->Init();
+
+	if (!m_pHoopsModel)
+		return FALSE;
+
+	return TRUE;
+}
+
+
+// user has opened a file
+BOOL CSampleHDoc::OnOpenDocument(LPCTSTR lpszPathName) 
+{
+	if (!CHoopsDoc::OnOpenDocument(lpszPathName))
+		return FALSE;
+	
+	// create a new HSampleHModel object for this Document
+	m_pHoopsModel = new HSampleHModel();
+	m_pHoopsModel->Init();
+	// read the file into the Model Object
+	TCHAR extension[1024] = { _T("") };;
+	unsigned int i;
+
+	HUtility::FindFileNameExtension(lpszPathName, extension);
+
+	// make it lower case
+	for(i = 0; i < _tcslen(extension); i++)
+		extension[i] = (TCHAR) tolower(extension[i]);
+
+	
+	if(!_tcscmp(extension, _T("hsf")))
+	{
+		// then we will deal with this file in the OnInitalUpdate when
+		// we have created a View object
+		m_bStreamFile = true;
+	}
+	else if (!_tcscmp(extension, _T("xmt_txt")) || !_tcscmp(extension, _T("x_t")) || !_tcscmp(extension, _T("x_b")) || !_tcscmp(extension, _T("xmt_bin")))
+	{
+		m_bSolidFile = true;
+
+		HFileInputResult result = ((HSampleHModel*)m_pHoopsModel)->Read(lpszPathName);
+	}
+	else
+	{
+		HFileInputResult result = m_pHoopsModel->Read(lpszPathName);
+
+		if (result == InputVersionMismatch)
+			AfxMessageBox(ID_ERROR_READ_INCORRECT_VERSION);
+		else if( result == InputFail )
+			AfxMessageBox(ID_ERROR_READ_INVALID_HSF_FILE);
+		else if ( result != InputOK ) {;}//TODO HANDLE SOME OTHER ERROR
+
+	}
+	ReadPostProcess();
+
+	return TRUE;
+}
+
+
+BEGIN_MESSAGE_MAP(CSampleHDoc, CHoopsDoc)
+	//{{AFX_MSG_MAP(CSampleHDoc)
+	//}}AFX_MSG_MAP
+END_MESSAGE_MAP()
+
+/////////////////////////////////////////////////////////////////////////////
+// CSampleHDoc diagnostics
+
+#ifdef _DEBUG
+void CSampleHDoc::AssertValid() const
+{
+	CHoopsDoc::AssertValid();
+}
+
+void CSampleHDoc::Dump(CDumpContext& dc) const
+{
+	CHoopsDoc::Dump(dc);
+}
+#endif //_DEBUG
+
+/////////////////////////////////////////////////////////////////////////////
+// CSampleHDoc serialization
+
+void CSampleHDoc::Serialize(CArchive& ar)
+{
+	if (ar.IsStoring())
+	{
+		// TODO: add storing code here
+	}
+	else
+	{
+		// TODO: add loading code here
+	}
+}
+
+
+//======================================================================
+//	Function :		CSampleHDoc::ReadPostProcess
+//	Description :	Sets the members once file reading is completed.
+//					Call this function after you read the file via 
+//					non-standard route (e.g. View->Load)
+//	Return :void	-	
+//	Parameters :
+//	Note :
+//======================================================================
+void CSampleHDoc::ReadPostProcess() 
+{
+	UpdateModelGeometryType();
+}
+
+
+
+
+
+//======================================================================
+//	Function :		CSampleHDoc::UpdateModelGeometryType
+//	Description :	Reads if any user value is set on the modelkey and 
+//					sets the geometry type of the model accordingly
+//	Return :void	-	
+//	Parameters :
+//	Note :
+//======================================================================
+long CSampleHDoc::UpdateModelGeometryType()
+{
+	HC_Open_Segment_By_Key(m_pHoopsModel->GetModelKey());
+		HC_POINTER_SIZED_INT value = 0L;
+		if (HC_Show_Existence("user value"))
+		{
+			HC_Show_User_Value(&value);
+			if (value == 1L)
+				m_pHoopsModel->SetBRepGeometry(true);
+			if (value == 2L)
+				m_pHoopsModel->SetFEAGeometry(true);
+			if (value == 3L)
+				m_pHoopsModel->SetVectorGeometry(true);
+		}
+		else
+		{
+			m_pHoopsModel->SetBRepGeometry(false);
+			m_pHoopsModel->SetFEAGeometry(false);
+			m_pHoopsModel->SetVectorGeometry(false);
+		}
+	HC_Close_Segment();
+
+	return static_cast<long>(value);
+}
+

@@ -1,0 +1,110 @@
+// SampleHView.h : interface of the CSampleHView class, derived from CHoopsView
+// Adds application specific members the the GUI view object such as a QueryDialog
+// and UI update/message maps
+
+#if !defined(AFX_CSampleHView_H__FCA603FB_1694_11D2_B736_00805F85736F__INCLUDED_)
+#define AFX_CSampleHView_H__FCA603FB_1694_11D2_B736_00805F85736F__INCLUDED_
+
+#if _MSC_VER >= 1000
+#pragma once
+#endif // _MSC_VER >= 1000
+
+#include "CHoopsView.h"
+#include "HStream.h"
+#include "HBaseOperator.h"
+#include "HEventInfo.h"
+
+class HSampleHView;
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// CSampleHView view
+
+class CSampleHView : public CHoopsView
+{
+protected:
+	CSampleHView();           // protected constructor used by dynamic creation
+	DECLARE_DYNCREATE(CSampleHView)
+
+private:
+
+// Attributes
+public:
+
+// Operations
+public:
+	HSampleHView* GetMyBaseView() { return (HSampleHView*)m_pHView; }
+
+	// set current operator
+	void LocalSetOperator(HBaseOperator *NewOperator);
+
+
+
+// Overrides
+	// ClassWizard generated virtual function overrides
+	//{{AFX_VIRTUAL(CSampleHView)
+	public:
+	virtual void OnInitialUpdate();
+	virtual void OnActivateView(BOOL bActivate, CView* pActivateView, CView* pDeactiveView);
+	protected:
+	virtual void OnPrint(CDC* pDC, CPrintInfo* pInfo);
+	//}}AFX_VIRTUAL
+
+// Implementation
+protected:
+	virtual ~CSampleHView();
+
+	void load(const char * filename);
+
+
+#ifdef _DEBUG
+	virtual void AssertValid() const;
+	virtual void Dump(CDumpContext& dc) const;
+#endif
+
+private:
+
+
+	// Generated message map functions
+protected:
+	//{{AFX_MSG(CSampleHView)
+	afx_msg void OnFileSaveAs();
+	afx_msg void OnGouraudShaded();
+	afx_msg void OnWireframe();
+	afx_msg void OnHiddenline();
+	afx_msg void OnZoom();
+	afx_msg void OnZoomToExtents();
+	afx_msg void OnZoomToWindow();
+	afx_msg void OnOrbit();
+	afx_msg void OnUpdateOrbit(CCmdUI* pCmdUI);
+	afx_msg void OnPan();
+	afx_msg void OnUpdatePan(CCmdUI* pCmdUI);
+	afx_msg void OnWindowSelect();
+	afx_msg void OnUpdateWindowSelect(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateZoom(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateZoomToWindow(CCmdUI* pCmdUI);
+	afx_msg void OnCreateCone();
+	afx_msg void OnCreateCylinder();
+	afx_msg void OnCreateSphere();
+	afx_msg void OnUpdateCreateCone(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateCreateCylinder(CCmdUI* pCmdUI);
+	afx_msg void OnUpdateCreateSphere(CCmdUI* pCmdUI);
+	afx_msg void OnRunMyCode();
+	//}}AFX_MSG
+	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnParasolidCreateblock();
+	afx_msg void OnParasolidDeletebody();
+	afx_msg void OnParasolidBlend();
+	afx_msg void OnBooleanUnite();
+	afx_msg void OnBooleanSubtract();
+	afx_msg void OnBooleanIntersect();
+};
+
+/////////////////////////////////////////////////////////////////////////////
+
+//{{AFX_INSERT_LOCATION}}
+// Microsoft Developer Studio will insert additional declarations immediately before the previous line.
+
+#endif // !defined(AFX_CSampleHView_H__FCA603FB_1694_11D2_B736_00805F85736F__INCLUDED_)
